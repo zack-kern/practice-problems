@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+    var myArray = [1, 2, 3, 4, 5]
+
+    function meanCalculator(numbersArray) {
+     var result = 0;
+      for (var i = 0; i < numbersArray.length; i++) {
+        result += numbersArray[i];
+      }
+      var avg = result / numbersArray.length;
+      console.log(myArray, 'has a mean of ', avg)
+      }
+    meanCalculator(myArray)
+  </script>
+</body>
+</html>
