@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    sen = "'Hi I am Zack!!'"
+
+
+    function getWordCount(sentence) {
+      var LEN = sentence.length
+      var TOT = 0;
+      for (var i = 0; i < LEN; i++)
+      if(sentence[i]==" "){
+        TOT += 1
+
+      }
+      TOT += 1
+      console.log("The word count of the sentence ", sen, "is: ", TOT)
+    }
+
+    getWordCount(sen)
+  </script>
+</body>
+</html>
