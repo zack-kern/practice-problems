@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    var myWord = 'Yolo'
+    var myNum = 8
+    function createRepeatingLetters(word, num){
+      for (var i = 0; i < myWord.length; i++){
+        var letter = myWord[i]
+        var myNewWord;
+       for (var j = 0; j < num; j++){
+         myNewWord += letter
+        }
+      }
+      myNewWord = myNewWord.slice(9) //<--------takes off the undefined before the string from the var declaration on 16
+      console.log(myNewWord)
+    }
+    createRepeatingLetters(myWord, myNum)
+  </script>
+</body>
+</html>
