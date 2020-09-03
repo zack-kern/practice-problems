@@ -7,12 +7,13 @@
 </head>
 <body>
   <script>
-    decimalPlaceCounter("129.4543")
+    var myString = "190.9876"
+    decimalPlaceCounter(myString)
     function decimalPlaceCounter(stringNumber){
      for(var i = 0; i<stringNumber.length; i++){
        if(stringNumber[i]=="."){
          var decPlace = i
-         console.log(stringNumber.length-decPlace-1)
+         console.log("The string:", myString, " has ", stringNumber.length-decPlace-1, " numbers after the decimal.")
        }
      }
     }
