@@ -13,10 +13,13 @@
      for(var i = 0; i<stringNumber.length; i++){
        if(stringNumber[i]=="."){
          var decPlace = i
-         console.log("The string:", myString, " has ", stringNumber.length-decPlace-1, " numbers after the decimal.")
+         var quickMath = stringNumber.length - decPlace - 1
+         console.log(quickMath)
+         return quickMath
        }
      }
     }
+
   </script>
 </body>
 </html>
