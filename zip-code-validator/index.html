@@ -7,15 +7,23 @@
   </head>
   <body>
     <script>
+
+      // function name zipCodeValidator
+      // parameters are a string with a potential zipcode
+      // return true if the zip code is valid and false if not
+
+      // pseudo code--------------------------------------------------------
+      // check if the parameter is not NaN and the length is strictly 5 ...return true in this case
+      // if the previous case doesnt hold, return false
+
       function zipCodeValidator(zipToValidate) {
-        var numCheck;
-        var lengthCheck = 5;
-        for (var i = 0; i < zipToValidate.length; i++) {
-          current = !zipToValidate[i];
+        if (zipToValidate != NaN && zipToValidate.length === 5) {
+          return true;
+        } else {
+          return false;
         }
-        console.log(current && zipToValidate.length == lengthCheck);
       }
-      zipCodeValidator("89657");
+
     </script>
   </body>
 </html>
