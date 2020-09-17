@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function name: accountNumberProtector
+      // function parameters: cardNumberString - a string which contains a sixteen digit credit card number
+      // return: the last digits prepended with '**' as a string
+
+      // pseudo code--------------------------------------
+      // create empty storage for returned array called protectedString
+      // walk over the last four values of the parameter backwards and push the value to the created protectedString variable
+      // push '**' to the variable protectedString
+      // return the variable protectedString
+
+      function accountNumberProtector(cardNumberString) {
+        var protectedString = "**";
+        for (var i = 12; i < 16; i++) {
+          protectedString += cardNumberString[i];
+        }
+        protectedString += "**";
+        console.log(protectedString);
+        return protectedString;
+      }
+    </script>
+  </body>
+</html>
