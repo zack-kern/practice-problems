@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // function name: spellChecker
+      // parameters: userWords (an array of words in string format) and correctWords (an array of words in string format)
+      // return: an object called myObject with properties correct (an array of the words that were spelled correctly) and incorrect (an array of the incorrect words)
+
+      // pseudo code-------------------------------------------------------------------
+      // create empty array to store the correct and incorrect array values
+      // loop over either parameter's length  starting at zero and incrementing by 1
+      // for each iteration of the loop compare the current index values of the two different array parameters at the index value of the loop iteration
+      // if the indexed values do not match, push the indexed value of the incorrect array to the created empty incorrect array value
+      //if they match, push the current value of the correct array to the created empty correct array
+      // create an object and add the correct and incorrect arrays to it
+      // return the object
+
+      function spellChecker(userWords, correctWords) {
+        var correctArray = [];
+        var incorrectArray = [];
+        for (var i = 0; i < userWords.length; i++) {
+          if (userWords[i] == correctWords[i]) {
+            correctArray.push(userWords[i]);
+          } else {
+            incorrectArray.push(userWords[i]);
+          }
+        }
+        var myObject = {
+          correct: correctArray,
+          incorrect: incorrectArray,
+        };
+        return myObject;
+      }
+    </script>
+  </body>
+</html>
