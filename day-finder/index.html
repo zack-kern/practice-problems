@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // name: dayFinder
+      // parameter: string of date format (MM/DD/YYYY)
+      // returns: day of week as string
+      // example input: dayFinder("05/22/1946") ----> "Wednesday"
+
+      // pseudo code------------------------------------------
+      // since input is a string of fixed format (MM/DD/YYYY) indexing can occur directly from parameter
+      // create variables to hold the day, month, and year index values from parameter EX: parameter[0]+parameter[1] = the month value of the parameter input NOTE: this index includes the '/' in the strings
+      // since the Date object deals with exclusively numbers, convert each created variable into a num using parseInt(variable)
+      // since the month parameter on the date object is of 0 index, subtract the month num by one and store again
+      // create a date object with arguments being the number type variables . assign this date object to new storage variable
+      // use getDay method on date and assign this to new variable named dayNum
+      // create switch statement that compares the values 0-6 and returns strings Sunday-Saturday, respectively
+      // return the value of the switch statement
+
+      function dayFinder(stringDate) {
+        var day = stringDate[3] + stringDate[4];
+        var dayNum = parseInt(day);
+        var month = stringDate[0] + stringDate[1];
+        var monthNum = parseInt(month) - 1;
+        var year =
+          stringDate[6] + stringDate[7] + stringDate[8] + stringDate[9];
+        var yearNum = parseInt(year);
+        var date = new Date(yearNum, monthNum, dayNum);
+        var dayNum = date.getDay();
+        var finalDayName;
+        switch (dayNum) {
+          case 1:
+            finalDayName = "Monday";
+            break;
+          case 2:
+            finalDayName = "Tuesday";
+            break;
+          case 3:
+            finalDayName = "Wednesday";
+            break;
+          case 4:
+            finalDayName = "Thursday";
+            break;
+          case 5:
+            finalDayName = "Friday";
+            break;
+          case 6:
+            finalDayName = "Saturday";
+            break;
+          case 0:
+            finalDayName = "Sunday";
+            break;
+        }
+        return finalDayName;
+      }
+    </script>
+  </body>
+</html>
