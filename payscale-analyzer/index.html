@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Defining Problem:-----------------------------
+      // name payscaleAnalyzer
+      // input: [array of hourly wages] called paylist
+      // output: difference between highest and lowest values on array
+      //payscaleAnalyzer([28, 34, 21, 39])   // -> 18
+
+      // Pseudo Code:-------------------------------
+      // create storage for max value and min value with initial values of zero and difference value
+      // create an empty storage for difference value
+      // loop over every object in the inputted array once
+      // assign first indexed value to max and min properties
+      // compare the following index value in the array to the max and replace if max if greater
+      // compare the following index value in the array to the min and replace min with this index value if less
+      // do these comparisons over the entire array within the loop
+      // after loop completion assign the difference of the max and min to the difference value
+
+      function payscaleAnalyzer(payList) {
+        var max = payList[0];
+        var min = payList[0];
+        var difference;
+        for (var i = 0; i < payList.length; i++) {
+          if (max < payList[i]) {
+            max = payList[i];
+          } else if (min > payList[i]) {
+            min = payList[i];
+          }
+        }
+        difference = max - min;
+        return difference;
+      }
+    </script>
+  </body>
+</html>
