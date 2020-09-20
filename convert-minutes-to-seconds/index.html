@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function convertMinutesToSeconds(timeToConvert) {
+        var detInd;
+        for (var i = 0; i < timeToConvert.length; i++) {
+          if (timeToConvert[i] == ":") {
+            detInd = i;
+          }
+        }
+        if (detInd) {
+          var min = "";
+          for (var j = 0; j < detInd; j++) {
+            min += timeToConvert[j];
+          }
+          min = parseInt(min);
+          min = min * 60;
+          var sec = "";
+          for (var k = detInd + 1; k < timeToConvert.length; k++) {
+            sec += timeToConvert[k];
+          }
+          sec = parseInt(sec);
+          var ans = sec + min;
+        }
+        return ans;
+      }
+    </script>
+  </body>
+</html>
