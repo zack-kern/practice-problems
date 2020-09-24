@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function volumeCalculator(boxesArray) {
+        var currentBox;
+        var add = 0;
+        for (var i = 0; i < boxesArray.length; i++) {
+          currentBox = boxesArray[i];
+          var mult = 1;
+          for (var j = 0; j < 3; j++) {
+            mult *= currentBox[j];
+          }
+          add += mult;
+        }
+        return add;
+      }
+
+      volumeCalculator([
+        [5, 4, 2],
+        [12, 15, 21],
+        [7, 7, 7],
+      ]); // ===> 4163
+    </script>
+  </body>
+</html>
