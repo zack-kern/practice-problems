@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // create a new variable to store the new string
+      // loop over the entirety of the input at every letter or space
+      // check if the current value if f, o, or g
+      // if not f o or g then add the string value to the created new variable
+
+      function fogClearer(stringToClear) {
+        var newS = "";
+        for (var i = 0; i < stringToClear.length; i++) {
+          if (
+            stringToClear[i] == "f" ||
+            stringToClear[i] == "o" ||
+            stringToClear[i] == "g"
+          ) {
+            // console.log(i);
+          } else {
+            newS += stringToClear[i];
+          }
+        }
+        console.log(newS);
+        return newS;
+      }
+    </script>
+  </body>
+</html>
